@@ -1,0 +1,154 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+}
+
+.custom-image-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 75%; /* Adjust this value according to your image aspect ratio */
+}
+
+.slider-before,
+.slider-after {
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-after {
+  overflow: hidden;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  cursor: ew-resize;
+}
+
+.slider-handle::before,
+.slider-handle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  cursor: ew-resize;
+  transition: all 0.2s ease-out;
+}
+
+.slider-handle::before {
+  left: -24px;
+  border-right: 16px solid #fff;
+}
+
+.slider-handle::after {
+  right: -24px;
+  border-left: 16px solid #fff;
+}
+
+.image-labels {
+  position: absolute;
+  bottom: 10px; /* Reduced padding from the bottom */
+  width: calc(100% - 20px); /* Adjust to add space for the labels */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.label-before,
+.label-after {
+  background-color: rgba(0, 0, 0, 0.2); /* 20% opacity */
+  color: #fff;
+  padding: 5px;
+}
+
+.label-before {
+  margin-left: 10px; /* Adjust margin if necessary */
+}
+
+.label-after {
+  margin-right: -100px; /* Adjust margin if necessary */
+}
+
+.carousel-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px; /* Adjust as needed */
+  color: black;
+  font-size: 16px;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.image-count {
+  margin-left: 0; /* Align with the left edge of the image */
+}
+
+.preset-name {
+  flex: 1; /* Allow it to take available space */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
+}
+
+.carousel-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px; /* Adjust as needed */
+  color: black;
+  font-size: 16px;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.image-count {
+  margin-left: 0; /* Align with the left edge of the image */
+}
+
+.preset-name {
+  flex: 1; /* Allow it to take available space */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px; /* Reduced margin */
+  width: 100%;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  padding: 0 10px; /* Adjust padding for spacing */
+}
+
+.arrow-prev {
+  margin-right: auto; /* Push the left arrow to the left edge */
+}
+
+.arrow-next {
+  margin-left: auto; /* Push the right arrow to the right edge */
+}
